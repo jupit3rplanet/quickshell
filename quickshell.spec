@@ -1,6 +1,6 @@
 Name:		quickshell
-Version:	0.2.1
-Release:	6
+Version:	0.3.1
+Release:	1
 Summary:	Flexible QtQuick based desktop shell toolkit
 License:	LGPL-3.0-only AND GPL-3.0-only
 URL:		https://github.com/quickshell/quickshell
@@ -24,23 +24,27 @@ BuildRequires:	cmake(Qt6QuickControls2)
 BuildRequires:	cmake(Qt6Widgets)
 BuildRequires:	cmake(Qt6ShaderTools)
 BuildRequires:	cmake(Qt6WaylandClient)
-BuildRequires:	cmake(Qt6LabsSynchronizer)
-BuildRequires:  cmake(Qt6QmlMeta)
+BuildRequires:	cmake(Qt6DBus)
+BuildRequires:	cmake(Qt6Network)
 BuildRequires:	pkgconfig(CLI11)
-BuildRequires:	pkgconfig(breakpad)
+# breakpad was dropped upstream in favor of cpptrace
+BuildRequires:	cmake(cpptrace)
 BuildRequires:	pkgconfig(gbm)
 BuildRequires:	pkgconfig(libdrm)
 BuildRequires:	pkgconfig(libpipewire-0.3)
 BuildRequires:	pkgconfig(jemalloc)
-BuildRequires:	cmake(Qt6QmlNetwork)
 BuildRequires:	qt6-qtbase-theme-gtk3
-BuildRequires:	cmake(Qt6QmlCore)
 BuildRequires:	pkgconfig(pam)
 BuildRequires:	pkgconfig(wayland-protocols)
 BuildRequires:	pkgconfig(wlr-protocols)
+# new in 0.3.1: src/services/polkit/CMakeLists.txt
+BuildRequires:	pkgconfig(glib-2.0)
+BuildRequires:	pkgconfig(gobject-2.0)
+BuildRequires:	pkgconfig(polkit-agent-1)
+BuildRequires:	pkgconfig(polkit-gobject-1)
 BuildRequires:	spirv-tools
 BuildRequires:	cmake(VulkanHeaders)
-BuildRequires:	pkgconfig(pam)
+
 Recommends:	(%{name}-hyprland = %{EVRD} if hyprland)
 Recommends:	(%{name}-i3 = %{EVRD} if i3)
 Recommends:	(%{name}-wayland = %{EVRD} if %{mklibname wayland-client})
@@ -101,11 +105,13 @@ GreetD integration for %{name}
 %{_qtdir}/qml/Quickshell/Bluetooth
 %{_qtdir}/qml/Quickshell/DBusMenu
 %{_qtdir}/qml/Quickshell/Io
+%{_qtdir}/qml/Quickshell/Network
 %dir %{_qtdir}/qml/Quickshell/Services
 %{_qtdir}/qml/Quickshell/Services/Mpris
 %{_qtdir}/qml/Quickshell/Services/Notifications
 %{_qtdir}/qml/Quickshell/Services/Pam
 %{_qtdir}/qml/Quickshell/Services/Pipewire
+%{_qtdir}/qml/Quickshell/Services/Polkit
 %{_qtdir}/qml/Quickshell/Services/SystemTray
 %{_qtdir}/qml/Quickshell/Services/UPower
 %{_qtdir}/qml/Quickshell/Widgets
