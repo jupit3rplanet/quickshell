@@ -36,7 +36,6 @@ BuildRequires:	pkgconfig(jemalloc)
 BuildRequires:	qt6-qtbase-theme-gtk3
 BuildRequires:	pkgconfig(pam)
 BuildRequires:	pkgconfig(wayland-protocols)
-BuildRequires:	pkgconfig(wlr-protocols)
 # new in 0.3.1: src/services/polkit/CMakeLists.txt
 BuildRequires:	pkgconfig(glib-2.0)
 BuildRequires:	pkgconfig(gobject-2.0)
