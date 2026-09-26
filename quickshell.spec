@@ -105,7 +105,7 @@ GreetD integration for %{name}
 %{_qtdir}/qml/Quickshell/Bluetooth
 %{_qtdir}/qml/Quickshell/DBusMenu
 %{_qtdir}/qml/Quickshell/Io
-%{_qtdir}/qml/Quickshell/Network
+%{_qtdir}/qml/Quickshell/Networking
 %dir %{_qtdir}/qml/Quickshell/Services
 %{_qtdir}/qml/Quickshell/Services/Mpris
 %{_qtdir}/qml/Quickshell/Services/Notifications
