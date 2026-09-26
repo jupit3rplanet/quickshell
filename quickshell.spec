@@ -14,6 +14,7 @@ BuildOption:	-DDISTRIBUTOR="OpenMandriva LX"
 BuildOption:	-DDISTRIBUTOR_DEBUGINFO_AVAILABLE=YES
 BuildOption:	-DINSTALL_QMLDIR="%{_qtdir}/qml"
 BuildOption:	-DINSTALL_QML_PREFIX="%{_qtdir}/qml"
+BuildOption:  -DCMAKE_DISABLE_PRECOMPILE_HEADERS=ON
 
 BuildRequires:	cmake
 BuildRequires:	cmake(Qt6Core)
