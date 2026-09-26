@@ -3,8 +3,8 @@ Version:	0.3.1
 Release:	1
 Summary:	Flexible QtQuick based desktop shell toolkit
 License:	LGPL-3.0-only AND GPL-3.0-only
-URL:		https://github.com/quickshell/quickshell
-Source0:	https://github.com/quickshell/quickshell/archive/v%{version}/%{name}-%{version}.tar.gz
+URL:		https://github.com/quickshell-mirror/quickshell
+Source0:	https://github.com/quickshell-mirror/quickshell/archive/v%{version}/%{name}-%{version}.tar.gz
 Group:		Window Manager/Bar
 
 BuildSystem:	cmake
