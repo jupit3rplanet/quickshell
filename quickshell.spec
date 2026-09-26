@@ -115,6 +115,7 @@ GreetD integration for %{name}
 %{_qtdir}/qml/Quickshell/Services/SystemTray
 %{_qtdir}/qml/Quickshell/Services/UPower
 %{_qtdir}/qml/Quickshell/Widgets
+%{_qtdir}/qml/Quickshell/WindowManager
 %{_qtdir}/qml/Quickshell/_Window
 %{_qtdir}/qml/Quickshell/qmldir
 %{_qtdir}/qml/Quickshell/quickshell-core.qmltypes
